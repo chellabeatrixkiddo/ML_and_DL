@@ -16,12 +16,15 @@ Data Preprocessing Steps:
 9. Remove very short words (single letter words)
 10. Simple spell correction (like multiple repetition of characters replaced by 2 repeats - loooooooovvvvee replaced with loovvee)
 11. class imbalance problem - training set has only sentiments 0 and 4 (negative and positive) but test set has sentiments 0, 2 and 4 (negative, neutral and positive). So I have removed the isntances belonging to class neutral fromt he test set.
+12. Stop Words are removed
+13. Lemmatization is done (using WordNet Lemmatizer)
 
-Frequency based Word Embeddings are used as features: TFIDF with Unigram, Bigram and Trigram variants.
+Frequency based Word Embeddings are used as features: TFIDF with Unigram, Bigram and Trigram variants. Also the maximum number of features included is varied to see its effect.
 
 Machine Learning Algorithms used for model building:
 a. Naive Bayes
 b. Logistic Regression
 c. SVM
+d. Ensemble
 
 Metric Used: Accuracy
