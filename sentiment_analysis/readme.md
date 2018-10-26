@@ -14,8 +14,8 @@ Data Preprocessing Steps:
 7. Negation handling - replace can’t with can not, etc. (subsumed in contraction handling)
 8. Remove numbers, special characters (keep only text)
 9. Remove very short words (single letter words)
-10. Simple spell correction (like multiple repetition of characters replaced by 2 repeats - loooooooovvvvee replaced to loovvee)
-11. class imbalance problem - training set has only sentiments 0 and 4 but test set has sentiments 0, 2 and 4
+10. Simple spell correction (like multiple repetition of characters replaced by 2 repeats - loooooooovvvvee replaced with loovvee)
+11. class imbalance problem - training set has only sentiments 0 and 4 (negative and positive) but test set has sentiments 0, 2 and 4 (negative, neutral and positive). So I have removed the isntances belonging to class neutral fromt he test set.
 
 Frequency based Word Embeddings are used as features: TFIDF with Unigram, Bigram and Trigram variants.
 
@@ -23,3 +23,5 @@ Machine Learning Algorithms used for model building:
 a. Naive Bayes
 b. Logistic Regression
 c. SVM
+
+Metric Used: Accuracy
