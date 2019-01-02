@@ -1,0 +1,1 @@
+Classify the vehicle images as Emergency Vehicle and Non Emergency Vehicle.
